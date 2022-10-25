@@ -5,7 +5,8 @@ local _M = {
   modkey = 'Mod4',
   config_dir = '/home/' .. user .. '/.config/awesome/',
   theme = 'nord',
-  bin = '/home/' .. user .. '/.local/bin/'
+  bin = '/home/' .. user .. '/.local/bin/',
+  wi_theme = 'powernord'
 }
 
 return _M

@@ -5,6 +5,7 @@ local bin = require 'config.vars' .bin
 local m = { modkey }
 local s = { 'Shift' }
 local ms = { modkey, s[1] }
+local machi = require 'layout-machi'
 
 function e(app) 
   return function() 
@@ -25,6 +26,8 @@ local keydata = {
   {ms, 'Return', e(bin .. 'launcher') },
   {m,  'BackSpace', e(bin .. 'powermenu') },
   {ms, 'm', e(bin .. 'mpdmenu') },
+  {m, '.', function() machi.default_editor.start_interactive() end },
+  {m, '/', function() machi.switcher.start(client.focus) end },
   {},
 }
 

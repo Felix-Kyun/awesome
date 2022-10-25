@@ -1,6 +1,11 @@
 local awful = require 'awful'
 require 'awful.autofocus'
 
+-- addition config for machi layout
+local machi = require 'layout-machi'
+local beautiful = require 'beautiful'
+beautiful.layout_machi = machi.get_icon()
+
 --[[
   All Layouts:
     - folating
@@ -17,5 +22,6 @@ require 'awful.autofocus'
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
+    machi.default_layout,
     awful.layout.suit.spiral,
 }

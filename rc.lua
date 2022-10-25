@@ -37,3 +37,4 @@ require 'config.signal'
 
 -- autostart apps 
 require 'config.autostart'
+
